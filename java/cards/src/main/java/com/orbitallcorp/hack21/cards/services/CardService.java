@@ -5,10 +5,7 @@ import com.orbitallcorp.hack21.cards.repositories.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 @Service
 public class CardService {
@@ -26,9 +23,14 @@ public class CardService {
             cards.add(card);
         }
 
-        // O código abaixo força o Iterable para List
-        // return (List<Customer>) repository.findAll();
+
 
         return cards;
     }
+
+    /*
+    //Tentativa de implementar findById
+    public Optional<Card> findById(Long id){
+        return cardRepository.findById(id);
+    }*/
 }
